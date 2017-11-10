@@ -35,11 +35,10 @@ body {
 			this.load.audio('what','audio/jump.wav');
 			this.load.audio('when','audio/bgm.wav');
 		}
-		var lives = 2;
+		
 		var woot;
 		function create() {
-			var style2 = {font:"bold 14px Arinal",fill: "FFA500", boundsAlignH: "center", boundsAlignV: "middle"};
-			livestext = game.add.text(10, 30 "LIVES:" +lives, style2);
+			
 			Phaser.Canvas.setImageRenderingCrisp(game.canvas)
 			game.scale.pageAlignHorizontally = true;
 			game.scale.pageAlignVertically = true
@@ -79,7 +78,7 @@ body {
 			woot = game.add.audio('woot');
 			what = game.add.audio('what');
 			when = game.add.audio('when');
-			livestext.fixedToCamera = true;
+			
 			
 			
 		}
