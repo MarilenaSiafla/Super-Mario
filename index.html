@@ -76,9 +76,10 @@ body {
 			woot = game.add.audio('woot');
 			what = game.add.audio('what');
 			when = game.add.audio('when');
-			when.play();
+			
 		}
 		function update() {
+			when.play();
 			game.physics.arcade.collide(player, layer);
 			game.physics.arcade.collide(goombas, layer);
 			game.physics.arcade.overlap(player, goombas, goombaOverlap);
