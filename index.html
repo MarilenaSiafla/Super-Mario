@@ -38,7 +38,7 @@ body {
 		var lives = 2;
 		var woot;
 		function create() {
-			var style2 = (font:"bold 14px Arinal",fill: "FFA500", boundsAlignH: "center", boundsAlignV: "middle");
+			var style2 = {font:"bold 14px Arinal",fill: "FFA500", boundsAlignH: "center", boundsAlignV: "middle"};
 			livestext = game.add.text(10, 30 "LIVES:" +lives, style2);
 			Phaser.Canvas.setImageRenderingCrisp(game.canvas)
 			game.scale.pageAlignHorizontally = true;
