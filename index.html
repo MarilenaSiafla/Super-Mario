@@ -31,7 +31,9 @@ body {
 			this.load.spritesheet('coin', 'assets/coin(2).png', 16, 16);
 			this.load.tilemap('level', 'assets/super_mario_map2.json', null,
 					Phaser.Tilemap.TILED_JSON);
+			this.load.audio('woot','audio/coin.wav');
 		}
+		var woot;
 		function create() {
 			Phaser.Canvas.setImageRenderingCrisp(game.canvas)
 			game.scale.pageAlignHorizontally = true;
@@ -69,6 +71,7 @@ body {
 			player.goesRight = true;
 			game.camera.follow(player);
 			cursors = game.input.keyboard.createCursorKeys();
+			woot = game.add.audio('woot');
 		}
 		function update() {
 			game.physics.arcade.collide(player, layer);
@@ -106,6 +109,7 @@ body {
 		}
 		function coinOverlap(player, coin) {
 			coin.kill();
+			woot.play();
 		}
 		function goombaOverlap(player, goomba) {
 			if (player.body.touching.down) {
